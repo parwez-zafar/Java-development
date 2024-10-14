@@ -29,4 +29,21 @@ public class QuestionService {
             System.out.println(s);
         }
     }
+
+    public void printScore()
+    {
+        int score = 0;
+        for(int i = 0; i < questions.length; i++)
+        {
+            Question que = questions[i];
+            String actualAanswer = que.getAnswer();
+
+            String userAnswer = selection[i];
+
+            if(actualAanswer.equals(userAnswer))
+                score += 1;
+        }
+
+        System.out.println("Your Score is : " + score);
+    }
 }
