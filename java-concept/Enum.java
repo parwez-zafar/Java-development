@@ -10,7 +10,7 @@ enum Laptop{
 
     private int price;
 
-    private Laptop(int price) {
+    private Laptop(int price) { // we are using private constructor here because we are creating the object in the same class
         this.price = price;
     }
 
