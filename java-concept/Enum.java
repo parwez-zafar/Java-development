@@ -3,6 +3,30 @@ enum Status {
     Running, Failed, Pending, Success;
 }
 
+// enum extens enum class
+
+enum Laptop{
+    Macbook(2000), XPS(2200), Surface(1500), TinkPad(1800);
+
+    private int price;
+
+    private Laptop(int price) {
+        this.price = price;
+    }
+
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    
+    
+}
+
 public class Enum {
 
     public static void main(String a[]) {
@@ -39,6 +63,10 @@ public class Enum {
                 System.out.println("Done");
                 break;
         }
+
+
+        Laptop lap = Laptop.Macbook;
+        System.out.println(lap + " : " + lap.getPrice());
 
     }
 }
