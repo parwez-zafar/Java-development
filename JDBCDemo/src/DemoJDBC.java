@@ -57,6 +57,17 @@ public class DemoJDBC {
 //        System.out.println(status);
 
 
+//        System.out.println("-------------------- Prepared Statement ---------");
+//        int sid = 101;
+//        String sname = "Max";
+//        int marks = 48;
+//        String preparedQuery = "INSERT INTO student values (?,?, ?)";
+//        PreparedStatement pSt = con.prepareStatement(preparedQuery);
+//        pSt.setInt(1, sid);
+//        pSt.setString(2, sname);
+//        pSt.setInt(3, marks);
+//        pSt.execute();
+//
         con.close();
 
         System.out.println("....connection closed");
