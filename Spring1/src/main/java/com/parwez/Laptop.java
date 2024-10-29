@@ -1,9 +1,14 @@
 package com.parwez;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component("com2")
+@Primary
 public class Laptop implements Computer {
 
-    Laptop(){
-        System.out.println("Laptop created");
+    public Laptop(){
+        System.out.println("Laptop Object created");
     }
 
     @Override

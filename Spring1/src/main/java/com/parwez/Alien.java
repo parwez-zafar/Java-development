@@ -1,12 +1,23 @@
 package com.parwez;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alien {
+    @Value("30")
     private int age;
+
+//    @Qualifier("com2")
     private Computer com;
+
+    @Value("5000")
     private int salary;
 
     public Alien(){
-        System.out.println("object created...");
+        System.out.println("Alien object created...");
     }
 
 //    @ConstructorProperties({"age", "lap", "salary"})
@@ -22,7 +33,7 @@ public class Alien {
     }
 
     public void setAge(int age) {
-        System.out.println("setter called");
+//        System.out.println("setter called");
         this.age = age;
     }
 
@@ -30,6 +41,8 @@ public class Alien {
         return com;
     }
 
+    @Autowired
+    @Qualifier("desktop")
     public void setCom(Computer com) {
         this.com = com;
     }
