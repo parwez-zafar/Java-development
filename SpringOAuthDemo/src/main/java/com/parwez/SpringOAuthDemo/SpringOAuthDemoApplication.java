@@ -1,12 +1,13 @@
-package com.parwez.SpringSecDemo;
+package com.parwez.SpringOAuthDemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringSecDemoApplication {
+public class SpringOAuthDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringSecDemoApplication.class, args);
+		SpringApplication.run(SpringOAuthDemoApplication.class, args);
 	}
+
 }
